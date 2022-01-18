@@ -8,7 +8,7 @@ export const ConstructionItem = ({item, array, setArray, itemIndex}) => {
     }
     return (
         <Container>
-            <p className='obra'>{item.nomeDaObra}</p>
+            <p className='obra'>{item.obraNome}</p>
             <p className='cidade'>{item.cidade}</p>
             <p className='estado'>{item.estado}</p>
             <button onClick={handleDeleteButton}><FaTrash size={20}/></button>

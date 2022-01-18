@@ -10,20 +10,20 @@ import { states } from "../../utils/generalUtils";
 
 export const InsertNewConstructionBar = (props) => {
   const [inputs, setInputs] = useState({
-    nomeDaObra: "",
+    obraNome: "",
     cidade: "",
     estado: "",
   });
 
   const handleAddingNewItem = () => {
     if (
-      inputs.nomeDaObra.length !== 0 &&
+      inputs.obraNome.length !== 0 &&
       inputs.cidade.length !== 0 &&
       inputs.estado.length !== 0
     ) {
       props.setArray([...props.array, inputs]);
       setInputs({
-        nomeDaObra: "",
+        obraNome: "",
         cidade: "",
         estado: "",
       });
@@ -36,7 +36,7 @@ export const InsertNewConstructionBar = (props) => {
         placeholder="Nome da obra"
         value={inputs.nomeDaObra}
         onChange={(event) =>
-          setInputs({ ...inputs, nomeDaObra: event.target.value })
+          setInputs({ ...inputs, obraNome: event.target.value })
         }
       />
       <InputCidade

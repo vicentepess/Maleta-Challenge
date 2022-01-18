@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { ConstructionItem } from '../../components/ConstructionItem'
 import { InsertNewConstructionBar } from '../../components/InsertNewConstructionBar'
 import { Container } from './style';
+import data from "../../source/obras.json"
 
 export const Home = () => {
-    const [array, setArray] = useState([]);
+    const [array, setArray] = useState(data);
     return (
         <Container>
         <h1>Lista de Obras</h1>
